@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Simaran</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html,body{
+width:100%;
+min-height:100%;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:flex-start;
+position:relative;
+padding:40px 0;
+overflow-x:hidden;
+
+background:
+radial-gradient(circle at top,#1b2c59 0%,#0c1738 30%,#050914 65%,#010308 100%);
+
+color:white;
+}
+/* ------------ Background Image ------------ */
+
+body::after{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(
+180deg,
+rgba(5,10,25,.15),
+rgba(2,5,15,.35),
+rgba(0,0,0,.55)
+);
+
+pointer-events:none;
+z-index:-2;
+
+}
+
+/* ------------ Dark Overlay ------------ */
+
+body::after{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(
+180deg,
+rgba(5,10,25,.15),
+rgba(2,5,15,.35),
+rgba(0,0,0,.55)
+);
+
+pointer-events:none;
+z-index:-2;
+
+}
+/* ------------ Stars ------------ */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* ------------ Card ------------ */
+
+.container{
+
+width:92%;
+max-width:860px;
+
+padding:45px;
+margin:0 auto;
+
+text-align:center;
+
+
+
+backdrop-filter:blur(0px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.35),
+0 0 50px rgba(255,255,255,.05);
+
+animation:fade 1.2s ease;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-size:2.8rem;
+margin-bottom:20px;
+font-weight:700;
+letter-spacing:1px;
+
+}
+
+#typing{
+
+font-size:1.15rem;
+line-height:1;
+white-space:pre-line;
+min-height:90px;
+
+}
+
+button{
+
+margin-top:30px;
+padding:16px 42px;
+border:none;
+border-radius:60px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+background:white;
+color:#111;
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:scale(1.06);
+box-shadow:0 10px 30px rgba(255,255,255,.3);
+
+}
+
+.message{
+
+margin-top:25px;
+font-size:1.12rem;
+line-height:1;
+text-align:center;
+animation:fade 1.5s;
+white-space:pre-line;
+
+}
+
+.message p{
+
+margin-bottom:20px;
+
+}
+
+.final{
+
+margin-top:35px;
+font-size:1.4rem;
+font-weight:600;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* ------------ Balloons ------------ */
+
+.balloon{
+
+position:fixed;
+bottom:-120px;
+font-size:35px;
+pointer-events:none;
+animation:float linear infinite;
+z-index:999;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* ------------ Mobile ------------ */
+
+@media (max-width:768px){
+
+body{
+padding:20px 0;
+}
+
+.container{
+width:95%;
+padding:28px 22px;
+}
+
+h1{
+font-size:2rem;
+}
+
+#typing,
+.message{
+font-size:1rem;
+line-height:1;
+}
+
+button{
+width:100%;
+padding:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="stars"></canvas>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday Simaran 🤍</h1>
+
+<div id="typing"></div>
+
+<button onclick="openGift()">
+Open Your Gift 🎁
+</button>
+
+<div id="gift" class="hidden">
+
+<div class="message"> <p>There is someone I know...</p>
+
+<p>Someone with a genuinely kind heart.</p>
+
+<p>Someone who finds happiness in caring for others.</p>
+
+<p>Someone who gives more than she ever expects in return.</p>
+
+<p>Someone who never gives up.</p>
+
+<p>Someone who works hard with quiet determination.</p>
+
+<p>
+Someone whose passion never fades,<br>
+no matter how long the journey may be.
+</p>
+
+<p>
+A heart like that...<br>
+A soul like that...
+</p>
+
+<p>is rare.</p>
+
+<p>And maybe...</p>
+
+<p>
+that's what makes that someone truly beautiful.
+</p>
+
+<p>
+A beauty like that is rare.
+</p>
+
+<p>
+Like an angel.
+</p>
+
+<p>
+One of God's most beautiful creations.
+</p>
+
+<p>...</p>
+
+<p>
+And do you know who that person is?
+</p>
+
+<p>
+<strong>It's you...</strong>
+
+<br><br>
+
+<strong>Simaran Kaur.</strong>
+</p>
+
+<p>
+I couldn't let myself keep this unsaid.
+</p>
+
+<p>
+So today...
+
+I just wanted you to know
+
+how truly beautiful you are.
+</p>
+
+<p>
+If there is one thing I wish for you...
+</p>
+
+<p>
+I hope you become everything you've always dreamed of becoming.
+</p>
+
+<p>
+And I hope you always keep smiling
+
+as beautifully as you always do.
+</p>
+
+<p>
+Happy Birthday. 🤍
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script> // ---------------- Typing Intro ----------------
+
+const introText = `Before you continue...
+
+Take a slow deep breath.
+
+I want to tell you something...
+
+Today feels like the perfect day.
+
+So...
+
+Ready?
+
+Click the button below.`;
+
+const typing = document.getElementById("typing");
+
+let i = 0;
+
+function typeWriter() {
+    if (i < introText.length) {
+        typing.innerHTML += introText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+    }
+}
+
+typeWriter();
+
+// ---------------- Gift ----------------
+
+function openGift() {
+    document.querySelector("button").style.display = "none";
+    document.getElementById("gift").classList.remove("hidden");
+    confettiBurst();
+}
+
+// ---------------- Stars ----------------
+
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+
+let stars = [];
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+function createStars() {
+    stars = [];
+      for (let i = 0; i < 450; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 1 + 0.5,
+            o: Math.random(),
+            d: Math.random() * 0.02
+        });
+    }
+}
+
+createStars();
+
+function animateStars(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    stars.forEach(s=>{
+
+        s.o += s.d;
+
+        if(s.o >= 1 || s.o <= 0){
+            s.d *= -1;
+        }
+
+        ctx.beginPath();
+        ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+
+        ctx.fillStyle = `rgba(255,255,255,${s.o})`;
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = "white";
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(animateStars);
+}
+
+animateStars();
+
+// ---------------- Balloons ----------------
+
+const balloons = ["🎂","🎊","🎉","🎈","🎈","🎈","🎂","🎊","🎉"];
+
+function spawnBalloon() {
+
+    const b = document.createElement("div");
+
+    b.className = "balloon";
+    b.innerHTML = balloons[Math.floor(Math.random()*balloons.length)];
+
+    b.style.left = Math.random()*100 + "vw";
+    b.style.animationDuration = (8 + Math.random()*5) + "s";
+
+    document.body.appendChild(b);
+
+    setTimeout(() => {
+        b.remove();
+    }, 14000);
+
+}
+
+setInterval(spawnBalloon, 800);
+
+// ---------------- Confetti ----------------
+
+function confettiBurst() {
+
+    for (let i = 0; i < 180; i++) {
+
+        const c = document.createElement("div");
+
+        c.style.position = "fixed";
+        c.style.left = Math.random()*100 + "vw";
+        c.style.top = "-20px";
+        c.style.width = "8px";
+        c.style.height = "8px";
+        c.style.background = `hsl(${Math.random()*360},100%,60%)`;
+        c.style.borderRadius = "50%";
+        c.style.pointerEvents = "none";
+        c.style.transition = "transform 4s linear, opacity 4s";
+
+        document.body.appendChild(c);
+
+        requestAnimationFrame(() => {
+
+            c.style.transform =
+                `translateY(${window.innerHeight+100}px)
+                 translateX(${(Math.random()-0.5)*300}px)
+                 rotate(${Math.random()*720}deg)`;
+
+            c.style.opacity = "0";
+
+        });
+
+        setTimeout(() => {
+            c.remove();
+        }, 4000);
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
